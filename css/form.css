@@ -1,0 +1,82 @@
+/* normalize elements */
+input, button, textarea, select {
+  font: inherit;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  margin-top: 1rem;
+  display: block;
+  font-weight: bold;
+  color: #fff;
+}
+
+fieldset {
+  border: 2px solid #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 0.5rem;
+  color: #fff;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0077cc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #004466, #006699);
+  min-height: 100vh;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* desktop view */
+@media screen and (min-width: 760px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  fieldset {
+    grid-column: span 2;
+  }
+
+  label, input {
+    grid-column: span 2;
+  }
+
+  button {
+    grid-column: span 2;
+    width: auto;
+  }
+}
